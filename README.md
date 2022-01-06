@@ -2,6 +2,8 @@
 
 ## Deployment URL
 
+https://react-blog-client.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
