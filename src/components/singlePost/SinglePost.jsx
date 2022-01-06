@@ -16,7 +16,9 @@ const SinglePost = () => {
 
    useEffect(() => {
       const getPost = async () => {
-         const res = await axios.get('/posts/' + postID);
+         const res = await axios.get(
+            process.env.REACT_APP_BACKEND_URL + '/posts/' + postID
+         );
          setPost(res.data);
          setTitle(res.data.title);
          setDesc(res.data.desc);
@@ -27,9 +29,12 @@ const SinglePost = () => {
 
    const handleDelete = async () => {
       try {
-         await axios.delete('/posts/' + post._id, {
-            data: { username: user.username },
-         });
+         await axios.delete(
+            process.env.REACT_APP_BACKEND_URL + '/posts/' + post._id,
+            {
+               data: { username: user.username },
+            }
+         );
          window.location.replace('/');
       } catch (err) {
          console.log(err.message);

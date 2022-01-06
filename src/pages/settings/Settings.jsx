@@ -34,7 +34,10 @@ const Settings = () => {
          updatedUser.profilePic = filename;
 
          try {
-            await axios.post('/upload', data);
+            await axios.post(
+               process.env.REACT_APP_BACKEND_URL + '/upload',
+               data
+            );
          } catch (err) {
             console.log(err.message);
          }

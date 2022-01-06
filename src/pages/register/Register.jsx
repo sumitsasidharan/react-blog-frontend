@@ -15,11 +15,14 @@ const Register = () => {
 
       try {
          setError(true);
-         const res = await axios.post('/auth/register', {
-            username,
-            email,
-            password,
-         });
+         const res = await axios.post(
+            process.env.REACT_APP_BACKEND_URL + '/auth/register',
+            {
+               username,
+               email,
+               password,
+            }
+         );
          res.data && history.push('/login');
       } catch (err) {
          console.log(err.message);

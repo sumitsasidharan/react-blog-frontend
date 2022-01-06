@@ -13,7 +13,9 @@ const Home = () => {
    useEffect(() => {
       const fetchPosts = async () => {
          try {
-            const res = await axios.get('/api/posts' + search);
+            const res = await axios.get(
+               process.env.REACT_APP_BACKEND_URL + '/posts' + search
+            );
             setPosts(res.data.posts);
             // console.log(res.data);
          } catch (err) {
