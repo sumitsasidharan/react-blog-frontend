@@ -1,5 +1,7 @@
 # REACT BLOG APP
 
+![project-image](https://user-images.githubusercontent.com/72500848/148492679-6099ef91-3cd9-483d-b41c-591c711b8d61.jpg)
+
 ## Deployment URL
 
 https://react-blog-client.netlify.app/
